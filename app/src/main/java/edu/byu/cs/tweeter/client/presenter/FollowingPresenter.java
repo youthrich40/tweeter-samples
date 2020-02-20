@@ -1,7 +1,7 @@
 package edu.byu.cs.tweeter.client.presenter;
 
 import edu.byu.cs.tweeter.client.net.request.FollowingRequest;
-import edu.byu.cs.tweeter.client.model.services.FollowingService;
+import edu.byu.cs.tweeter.client.model.service.FollowingService;
 import edu.byu.cs.tweeter.client.net.response.FollowingResponse;
 
 /**

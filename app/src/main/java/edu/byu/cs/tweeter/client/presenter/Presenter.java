@@ -1,6 +1,6 @@
 package edu.byu.cs.tweeter.client.presenter;
 
-import edu.byu.cs.tweeter.client.model.services.LoginService;
+import edu.byu.cs.tweeter.client.model.service.LoginService;
 import edu.byu.cs.tweeter.model.domain.User;
 
 /**
