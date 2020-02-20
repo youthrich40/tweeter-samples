@@ -1,7 +1,7 @@
-package edu.byu.cs.tweeter.client.net.response;
+package edu.byu.cs.tweeter.model.service.response;
 
 /**
- * A base class for server responses.
+ * A base class for service responses.
  */
 class Response {
 

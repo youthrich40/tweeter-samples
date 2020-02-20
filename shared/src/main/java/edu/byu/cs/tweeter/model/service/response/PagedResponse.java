@@ -1,4 +1,4 @@
-package edu.byu.cs.tweeter.client.net.response;
+package edu.byu.cs.tweeter.model.service.response;
 
 /**
  * A response that can indicate whether there is more data available from the server.

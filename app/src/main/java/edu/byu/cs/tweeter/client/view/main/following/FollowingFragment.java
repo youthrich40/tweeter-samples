@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.byu.cs.tweeter.R;
-import edu.byu.cs.tweeter.client.net.request.FollowingRequest;
+import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
 import edu.byu.cs.tweeter.client.presenter.FollowingPresenter;
 import edu.byu.cs.tweeter.client.view.asyncTasks.GetFollowingTask;
 import edu.byu.cs.tweeter.model.domain.User;
-import edu.byu.cs.tweeter.client.net.response.FollowingResponse;
+import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
 import edu.byu.cs.tweeter.client.view.cache.ImageCache;
 
 /**

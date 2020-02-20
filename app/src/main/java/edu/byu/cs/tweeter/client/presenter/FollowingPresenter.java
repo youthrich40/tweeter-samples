@@ -1,8 +1,9 @@
 package edu.byu.cs.tweeter.client.presenter;
 
-import edu.byu.cs.tweeter.client.net.request.FollowingRequest;
-import edu.byu.cs.tweeter.client.model.service.FollowingService;
-import edu.byu.cs.tweeter.client.net.response.FollowingResponse;
+import edu.byu.cs.tweeter.model.service.FollowingService;
+import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
+import edu.byu.cs.tweeter.client.model.service.FollowingServiceProxy;
+import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
 
 /**
  * The presenter for the "following" functionality of the application.
@@ -36,6 +37,7 @@ public class FollowingPresenter extends Presenter {
      * @return the followees.
      */
     public FollowingResponse getFollowing(FollowingRequest request) {
-        return FollowingService.getInstance().getFollowees(request);
+        FollowingService service = new FollowingServiceProxy();
+        return service.getFollowees(request);
     }
 }

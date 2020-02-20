@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import edu.byu.cs.tweeter.BuildConfig;
-import edu.byu.cs.tweeter.client.net.request.FollowingRequest;
+import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
 import edu.byu.cs.tweeter.model.domain.Follow;
 import edu.byu.cs.tweeter.model.domain.User;
-import edu.byu.cs.tweeter.client.net.response.FollowingResponse;
+import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
 
 /**
  * Acts as a Facade to the Tweeter server. All network requests to the server should go through
