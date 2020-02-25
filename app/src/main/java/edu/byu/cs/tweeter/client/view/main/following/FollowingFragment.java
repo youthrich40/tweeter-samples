@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,8 @@ import edu.byu.cs.tweeter.client.view.cache.ImageCache;
  * The fragment that displays on the 'Following' tab.
  */
 public class FollowingFragment extends Fragment implements FollowingPresenter.View {
+
+    private static final String LOG_TAG = "FollowingFragment";
 
     private static final int LOADING_DATA_VIEW = 0;
     private static final int ITEM_VIEW = 1;
@@ -251,6 +254,12 @@ public class FollowingFragment extends Fragment implements FollowingPresenter.Vi
          */
         private void removeLoadingFooter() {
             removeItem(users.get(users.size() - 1));
+        }
+
+        @Override
+        public void handleException(Exception throwable) {
+            Log.e("", throwable.getMessage(), throwable);
+            Toast.makeText(getContext(), throwable.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 

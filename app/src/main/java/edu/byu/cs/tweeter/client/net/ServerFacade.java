@@ -1,5 +1,7 @@
 package edu.byu.cs.tweeter.client.net;
 
+import java.io.IOException;
+
 import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
 import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
 
@@ -8,6 +10,10 @@ import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
  * this class.
  */
 public class ServerFacade {
+
+    // TODO: Set this the the invoke URL of your API. Find it by going to your API in AWS, clicking
+    //  on stages in the right-side menu, and clicking on the stage you deployed your API to.
+    private static final String SERVER_URL = "Insert your API invoke URL here";
 
     /**
      * Returns the users that the user specified in the request is following. Uses information in
@@ -18,8 +24,8 @@ public class ServerFacade {
      *                other information required to satisfy the request.
      * @return the followees.
      */
-    public FollowingResponse getFollowees(FollowingRequest request) {
-        // TODO: Implement by calling a lambda that invokes the FollowingServiceImpl class from the server module
-        return null;
+    public FollowingResponse getFollowees(FollowingRequest request, String urlPath) throws IOException {
+        ClientCommunicator clientCommunicator = new ClientCommunicator(SERVER_URL);
+        return clientCommunicator.doPost(urlPath, request, null, FollowingResponse.class);
     }
 }

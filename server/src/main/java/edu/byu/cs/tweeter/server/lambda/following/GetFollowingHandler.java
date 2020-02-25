@@ -3,7 +3,6 @@ package edu.byu.cs.tweeter.server.lambda.following;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-import edu.byu.cs.tweeter.model.service.FollowingService;
 import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
 import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
 import edu.byu.cs.tweeter.server.service.FollowingServiceImpl;
@@ -24,7 +23,7 @@ public class GetFollowingHandler implements RequestHandler<FollowingRequest, Fol
      */
     @Override
     public FollowingResponse handleRequest(FollowingRequest request, Context context) {
-        FollowingService service = new FollowingServiceImpl();
+        FollowingServiceImpl service = new FollowingServiceImpl();
         return service.getFollowees(request);
     }
 }

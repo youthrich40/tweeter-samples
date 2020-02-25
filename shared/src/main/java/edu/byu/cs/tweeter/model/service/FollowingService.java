@@ -1,5 +1,7 @@
 package edu.byu.cs.tweeter.model.service;
 
+import java.io.IOException;
+
 import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
 import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
 
@@ -16,5 +18,5 @@ public interface FollowingService {
      * @param request contains the data required to fulfill the request.
      * @return the followees.
      */
-    FollowingResponse getFollowees(FollowingRequest request);
+    FollowingResponse getFollowees(FollowingRequest request) throws IOException;
 }
